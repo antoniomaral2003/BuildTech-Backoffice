@@ -36,7 +36,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("condiciones_entrega");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Estado")
@@ -46,19 +46,19 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("estado");
 
                     b.Property<DateTime?>("FechaDevolucionReal")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_devolucion_real");
 
                     b.Property<DateTime?>("FechaEntregaReal")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_entrega_real");
 
                     b.Property<DateTime>("FechaFinEstimada")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_fin_estimada");
 
                     b.Property<DateTime>("FechaInicio")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_inicio");
 
                     b.Property<int>("MaquinariaId")
@@ -78,7 +78,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("operador_id");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");
@@ -102,7 +102,7 @@ namespace buildtech_backend.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Descripcion")
@@ -116,7 +116,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("nombre");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");
@@ -141,7 +141,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("costo");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Descripcion")
@@ -156,15 +156,15 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("estado");
 
                     b.Property<DateTime?>("FechaFin")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_fin");
 
                     b.Property<DateTime?>("FechaInicio")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_inicio");
 
                     b.Property<DateTime?>("FechaProgramada")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_programada");
 
                     b.Property<int?>("HorasUsoMomento")
@@ -191,7 +191,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("tipo");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");
@@ -221,7 +221,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("codigo_interno");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Estado")
@@ -261,7 +261,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("ubicacion_id");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");
@@ -299,7 +299,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("codigo");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Direccion")
@@ -314,11 +314,11 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("estado");
 
                     b.Property<DateTime?>("FechaFinEstimada")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_fin_estimada");
 
                     b.Property<DateTime?>("FechaInicio")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("fecha_inicio");
 
                     b.Property<string>("Nombre")
@@ -343,7 +343,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("responsable_telefono");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");
@@ -370,7 +370,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("apellidos");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Dni")
@@ -406,7 +406,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("telefono");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");
@@ -431,7 +431,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("categoria_id");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Descripcion")
@@ -445,7 +445,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("nombre");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");
@@ -476,7 +476,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("codigo_postal");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("created_at");
 
                     b.Property<string>("Direccion")
@@ -497,7 +497,7 @@ namespace buildtech_backend.Migrations
                         .HasColumnName("tipo");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone")
+                        .HasColumnType("timestamp without time zone")
                         .HasColumnName("updated_at");
 
                     b.HasKey("Id");

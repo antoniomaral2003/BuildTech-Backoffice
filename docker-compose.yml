@@ -13,7 +13,6 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - buildtech-network
     healthcheck:
@@ -24,15 +23,15 @@ services:
 
   backend:
     build:
-      context: .
+      context: ./buildtech-backend
       dockerfile: Dockerfile
     container_name: buildtech-backend
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: http://+:5000
+      ASPNETCORE_URLS: http://+:8080
       ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=buildtech_db;Username=buildtech_user;Password=buildtech_pass_2024"
     ports:
-      - "5000:5000"
+      - "5289:8080"
     depends_on:
       postgres:
         condition: service_healthy
@@ -41,7 +40,7 @@ services:
 
   frontend:
     build:
-      context: ./ClientApp
+      context: ./buildtech-frontend
       dockerfile: Dockerfile
     container_name: buildtech-frontend
     ports:

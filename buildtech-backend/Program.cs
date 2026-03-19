@@ -34,7 +34,11 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins(
+                "http://localhost:4200",  // Angular dev server
+                "http://localhost:80",    // Docker frontend
+                "http://localhost"        // Docker frontend (puerto 80 implícito)
+              )
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -42,11 +46,12 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Auto-migrate database
+// Auto-migrate database and seed initial data
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     dbContext.Database.Migrate();
+    DbSeeder.Seed(dbContext);
 }
 
 // Configure the HTTP request pipeline.
