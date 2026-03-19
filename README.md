@@ -288,6 +288,12 @@ Los datos incluyen marcas reales (Caterpillar, Komatsu, Liebherr, BOMAG, JLG) y 
 
 ---
 
+## 👥 Autor
+
+Desarrollado para Antonio Martín Alarcón - [antoniomaral2003](https://github.com/antoniomaral2003)
+
+---
+
 ## Licencia
 
 Este proyecto es de uso privado. Todos los derechos reservados.
